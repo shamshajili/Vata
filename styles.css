@@ -425,7 +425,7 @@ img{
 
   body{
     font-size:18px;
-    line-height:1.6;
+    line-height:1.65;
     font-weight:700;
   }
 
@@ -434,16 +434,18 @@ img{
     font-weight:800;
   }
 
+  /* LOGO düzəlişi */
   .logo-block{
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
     text-align:center;
+    margin-top:10px;
   }
 
   .logo{
-    width:420px;
+    width:500px;
     height:auto;
   }
 
@@ -455,26 +457,30 @@ img{
 
   .phone{
     font-size:16px;
-    margin-top:10px;
+    margin-top:8px;
   }
 
+  /* QR-lərin düzülməsi 2 üst + 1 alt */
   .qr-row{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(2,150px);
     justify-content:center;
-    align-items:flex-start;
-    gap:18px;
-    flex-wrap:wrap;
-    margin-top:24px;
+    gap:16px 20px;
+    margin-top:20px;
   }
 
   .qr{
     width:150px;
-    height:auto;
     padding:10px;
-    border:2px solid var(--line);
+    border:2px solid var(--brand);
     border-radius:12px;
     background:#fff;
     text-align:center;
+  }
+
+  .qr:nth-child(3){
+    grid-column:1 / span 2;
+    justify-self:center;
   }
 
   .qr-img{
@@ -488,34 +494,41 @@ img{
     font-weight:800;
   }
 
+  /* Kartların səliqəsi */
   .mini-card, .info-item, .agency-card{
-    font-size:16px;
+    font-size:15px;
     font-weight:700;
     overflow-wrap:break-word;
     word-break:break-word;
   }
 
   .mini-label, .mini-main, .amount{
-    font-size:16px;
+    font-size:15px;
   }
 
   .amount{
-    padding:8px 12px;
+    padding:6px 10px;
     border-width:2px;
   }
 
   .layout{
-    gap:28px;
+    gap:26px;
   }
 
   .info-list{
     gap:20px 14px;
   }
 
+  .right-col{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+  }
+
   .esim-card{
-    width:220px;
+    width:200px;
     padding:14px;
-    text-align:center;
   }
 
   .esim-label{
@@ -531,6 +544,7 @@ img{
     padding:8px 18px;
   }
 }
+
 
 
 
