@@ -415,25 +415,56 @@ img{
 }
 
 @media (max-width:768px){
-  body{
-    font-size:22px;
-    line-height:1.8;
-    font-weight:900;
+  .page{
+    width:1240px;
+    height:1754px;
+    margin:0 auto;
+    border:none;
+    box-shadow:none;
+    overflow-x:scroll;
   }
 
-  .logo{width:340px;height:auto}
+  body{
+    font-size:20px;
+    line-height:1.75;
+    font-weight:800;
+  }
 
   h1,h2,h3,p,span,div{
     font-size:inherit;
-    font-weight:900;
+    font-weight:1000;
   }
 
-  .qr-label, .amount, .fact-label{
+  .hotel-name{
     font-size:20px;
-    font-weight:900;
+    font-weight:800;
   }
-}
 
+  .fact-label,
+  .mini-label,
+  .mini-main,
+  .amount,
+  .agency-card .v,
+  .info-item p,
+  .reserv-text,
+  .qr-label {
+    font-size:20px;
+    font-weight:1000;
+  }
+
+  .logo{width:300px;height:auto}
+  .qr-row{
+    grid-template-columns:repeat(2,140px);
+    gap:16px;
+    justify-content:center;
+  }
+
+  .qr{width:140px}
+  .qr-img{height:120px}
+
+  .layout{gap:30px}
+  .info-list{gap:24px 16px}
+}
 
 .page{
   width:1240px;
