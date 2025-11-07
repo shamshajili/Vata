@@ -494,7 +494,7 @@ h2::after,h3::after{
   pointer-events:none;
   user-select:none;
   text-shadow:0 8px 22px rgba(44,90,160,.12);
-}@media (max-width: 480px) {
+}@media (max-width: 1024px) {
   html, body {
     width: 100%;
     height: auto;
@@ -503,10 +503,10 @@ h2::after,h3::after{
 
   .page {
     transform-origin: top left;
-    transform: scale(0.35);
-    width: 320vw;            
-    height: 2200px;         
-    margin-left: -15px;      /
+    transform: scale(0.55);
+    width: 220vw;
+    height: 1600px;
+    margin: 0 auto;
   }
 }
 
@@ -514,18 +514,18 @@ h2::after,h3::after{
   .page {
     transform-origin: top left;
     transform: scale(0.45);
-    width: 250vw;            
-    height: 2000px;         
-    margin-left: -10px;
+    width: 240vw;
+    height: 1500px;
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
   .page {
     transform-origin: top left;
-    transform: scale(0.55);
-    width: 230vw;            
-    height: 1900px;
-    margin-left: -8px;
+    transform: scale(0.35);
+    width: 300vw;
+    height: 1400px;
+    margin: 0 auto;
   }
 }
