@@ -99,7 +99,7 @@ img{
 .qr-row{
   display:grid;
   grid-template-columns:repeat(3,110px);
-  gap:26px;
+  gap:44px;
   justify-content:end;
   margin-top:24px;
 }
@@ -622,17 +622,27 @@ h2::after,h3::after{
   .esim-title { font-size: 17spx; }
 }
 @media (max-width: 1024px) {
-  .logo { transform: scale(1); transform-origin: top left; }
-  .logo img, .logo-img { max-height: none !important; width: auto; height: auto; }
+  .logo {
+    transform-origin: top left;
+    transform: translateX(-28px) scale(1);  
+  }
+  .logo img, .logo-img { max-height:none !important; width:auto; height:auto; }
 }
 
 @media (max-width: 768px) {
-  .logo { transform: scale(1.30); transform-origin: top left; }
-  .logo img, .logo-img { max-height: none !important; width: auto; height: auto; }
+  .logo {
+    transform-origin: top left;
+    transform: translateX(-30px) scale(1.2); 
+  }
+  .logo img, .logo-img { max-height:none !important; width:auto; height:auto; }
 }
 
 @media (max-width: 480px) {
-  .logo { transform: scale(1.2); transform-origin: top left; }
-  .logo img, .logo-img { max-height: none !important; width: auto; height: auto; }
+  .logo {
+    transform-origin: top left;
+    transform: translateX(-32px) scale(1.4); 
+  }
+  .logo img, .logo-img { max-height:none !important; width:auto; height:auto; }
   .esim-title { font-size: 17px; }
 }
+
