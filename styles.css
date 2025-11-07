@@ -529,11 +529,11 @@ img{
   .agency-card{
     width:100% !important;
     max-width:360px !important;
-    margin:0 auto;
     padding:18px !important;
     display:flex;
     flex-direction:column;
     gap:10px;
+    margin-right: 20px !important;
   }
 
   .agency-card .row{
