@@ -422,77 +422,147 @@ img{
     box-shadow:none;
     overflow-x:hidden;
   }
-
   body{
     font-size:20px;
     line-height:1.8;
     font-weight:700;
   }
-
   h1,h2,h3,p,span,div{
     font-size:inherit;
     font-weight:900;
   }
-
   .hotel-name{
     font-size:22px;
     font-weight:900;
   }
-
   .fact-label,
   .mini-label,
   .mini-main,
+  .mini-sub
   .amount,
   .agency-card .v,
   .info-item p,
   .reserv-text,
-  .qr-label {
-    font-size:20px;
+  .qr-label{
+    font-size:inherit;
     font-weight:900;
   }
-
-  .logo{
-    width: 250px !important;;
-    height:auto;
-    margin:auto;
-  }
-
-  .qr-row{
-    grid-template-columns:repeat(3,1fr);
-    justify-content:center;
-    gap:20px;
-    margin-top:24px;
-  }
-
-  .qr{
-    width:160px;
-    padding:10px;
-  }
-
-  .qr-img{
-    height:140px;
-  }
-
-  .layout{
-    gap:32px;
-  }
-
-  .info-list{
-    gap:24px 16px;
-  }
-
+  .layout{ gap:32px; }
+  .info-list{ gap:24px 16px; }
   .right-col{
     display:flex;
     flex-direction:column;
     align-items:center;
     gap:22px;
   }
+  .esim-card{ width:220px; }
 
-  .esim-card{
-    width:220px;
+  .header{
+    grid-template-columns: 1fr 460px; 
+    column-gap:16px;
+    align-items:start;
+  }
+  .logo-block{
+    display:block !important;
+    justify-self:start;
+    text-align:left;
+  }
+  .logo{
+    width:300px !important;  
+    height:auto !important;
+    margin:0 !important;
+  }
+  .logo-img{
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+  }
+
+  .qr-row{
+    display:grid !important;
+    grid-template-columns: repeat(3,110px);
+    gap:55px;
+    justify-content:end;  
+    margin-top:0;  
+    flex-wrap:wrap;  
+    margin-right: 15px;    
+  }
+ .qr{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:150px;
+    height:180px;
+    padding:10px;
+  }
+    .qr-img{
+    display:block;
+    width:100%;
+    height:120px;
+    object-fit:contain;
+    object-position:center center; 
+  }
+   .qr-label{
+    margin-bottom:6px;
+    font-size:16px;
+    font-weight:800;
+    text-align:center;
   }
 }
+@media (max-width: 768px) {
+  .brand-watermark{
+    left: 50% !important;
+    top: 44% !important;
+    transform: translate(-50%, -50%) rotate(-12deg) !important;
 
+    font-size: clamp(300px, 80vw, 600px) !important;
+    letter-spacing: .12em !important;
+    opacity: .12 !important;
+
+    z-index: 0 !important;
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+}
+@media (max-width:768px){
+  .agency-card{
+    width:100% !important;
+    max-width:360px !important;
+    margin:0 auto;
+    padding:18px !important;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .agency-card .row{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    flex-wrap:nowrap !important;
+    gap:8px;
+  }
+
+  .agency-card .k{
+    font-size:18px !important;
+    font-weight:700 !important;
+    width:auto !important;
+    min-width:110px !important;
+    white-space:nowrap;
+  }
+
+  .agency-card .v{
+    font-size:18px !important;
+    font-weight:800 !important;
+    text-align:right;
+    flex:1;
+  }
+
+  .agency-card *{
+    line-height:1.5 !important;
+  }
+}
 
 .page{
   width:1240px;
