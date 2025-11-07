@@ -427,12 +427,12 @@ img{
   body{
     font-size:20px;
     line-height:1.75;
-    font-weight:800;
+    font-weight:700;
   }
 
   h1,h2,h3,p,span,div{
     font-size:inherit;
-    font-weight:1000;
+    font-weight:900;
   }
 
   .hotel-name{
@@ -449,10 +449,10 @@ img{
   .reserv-text,
   .qr-label {
     font-size:20px;
-    font-weight:1000;
+    font-weight:900;
   }
 
-  .logo{width:300px;height:auto}
+  .logo{width:400px;height:auto}
   .qr-row{
     grid-template-columns:repeat(2,140px);
     gap:16px;
