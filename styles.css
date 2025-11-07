@@ -564,31 +564,73 @@ img{
   }
 }
 
-/* PRINT düzəlişi: watermark ölçü və mövqe */
-@media print{
-  .brand-watermark{
-    left: 50% !important;
-    top: 52% !important; /* yuxarı çəkdik ki, alt hissəyə düşməsin */
-    transform: translate(-50%, -50%) rotate(-12deg) !important;
-    font-size: clamp(160px, 22vw, 320px) !important; /* daha kiçik və sabit */
-    opacity: .08 !important;
+@media print {
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
-  /* Böyük kartların səhifə ortasında bölünməsinin qarşısını al */
+  .page {
+    width: 210mm !important;
+    height: 297mm !important;
+    margin: 0 auto !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: visible !important;
+    position: relative !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  .brand-watermark {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) rotate(-12deg) !important;
+    font-size: clamp(160px, 22vw, 300px) !important;
+    opacity: 0.08 !important;
+    z-index: 0 !important;
+    text-shadow: 0 8px 22px rgba(44, 90, 160, 0.12);
+  }
+
+  .travel-bg,
+  .travel-bg--bottom {
+    display: block !important;
+    opacity: 0.09 !important;
+    color: #2C5AA0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
   .hotel-card,
   .checkpay-row,
   .info-list,
   .agency-card,
   .esim-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
-  /* Çapda təmizlik üçün təyyarə kölgələrini gizlətmək istəyirsənsə: */
-  .travel-bg,
-  .travel-bg--bottom { display: none !important; }
-}
+  .page::before {
+    display: block !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 
+  img, svg {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .doc-badge {
+    background: #f5f7fb !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+}
 
 .page{
   width:1240px;
