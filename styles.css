@@ -530,3 +530,47 @@ h2::after,h3::after{
     margin: 0 auto;
   }
 }
+
+@media (max-width: 1024px) {
+  body { font-size: 20px; }                
+  .hotel-name { font-size: 20px; }         
+  .qr-label { font-size: 14px; }           
+  .address { font-size: 14px; }            
+  .mini-label { font-size: 12px; }         
+  .mini-sub { font-size: 14px; }           
+  .legal h3 { font-size: 22px; }           
+  .legal p { font-size: 14px; }            
+  .fact-label { font-size: 14px; }         
+  .esim-label { font-size: 18px; }         
+  .esim-title { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+  body { font-size: 20px; }                
+
+  .hotel-name { font-size: 22px; }
+  .qr-label { font-size: 14px; }
+  .address { font-size: 15px; }
+  .mini-label { font-size: 13px; }
+  .mini-sub { font-size: 15px; }
+  .legal h3 { font-size: 22px; }
+  .legal p { font-size: 15px; }
+  .fact-label { font-size: 15px; }
+  .esim-label { font-size: 18px; }
+  .esim-title { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 20px; }               
+
+  .hotel-name { font-size: 24px; }
+  .qr-label { font-size: 15px; }
+  .address { font-size: 16px; }
+  .mini-label { font-size: 14px; }
+  .mini-sub { font-size: 16px; }
+  .legal h3 { font-size: 23px; }
+  .legal p { font-size: 16px; }
+  .fact-label { font-size: 16px; }
+  .esim-label { font-size: 19px; }
+  .esim-title { font-size: 17spx; }
+}
