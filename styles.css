@@ -3,7 +3,7 @@
   --brand-dark:#021f7c;
   --ink:#0F172A;
   --muted:#151515;
-  --line:#E5E7EB;
+  --line:#003584;
   --bg:#ffffff;
   --chip:#F5F7FB;
   --pill:#EEF2FF;
@@ -81,7 +81,7 @@ img{
 .logo-img{
   max-width:100%;
   max-height:100px;
-  margin-top:-18px;
+  margin-top:15px;
   image-rendering:auto;
 }
 
@@ -209,7 +209,7 @@ img{
 }
 
 .mini-card{
-  border:1px solid var(--line);
+  border:2px solid var(--line);
   background:#ffffff;
   border-radius:12px;
   padding:12px;
@@ -261,7 +261,7 @@ img{
   display:inline-block;
   background:var(--pill);
   color:var(--brand-dark);
-  border:1px solid #dbe3ff;
+  border:2.5px solid #001870;
   border-radius:10px;
   padding:6px 10px;
   font-variant-numeric:tabular-nums;
@@ -316,7 +316,7 @@ img{
 }
 
 .agency-card{
-  border:1px solid var(--line);
+  border:2px solid var(--line);
   border-radius:12px;
   background:#ffffff;
   padding:20px;
@@ -349,7 +349,7 @@ img{
 }
 
 .info-item{
-  border:1px solid var(--line);
+  border:2px solid var(--line);
   background:#ffffff;
   border-radius:12px;
   padding:18px;
@@ -365,7 +365,7 @@ img{
   height:28px;
   border-radius:6px;
   background:#e6edf7;
-  border:1px solid var(--line);
+  border:2px solid var(--line);
   display:grid;
   place-items:center;
   color:var(--brand);
@@ -425,14 +425,14 @@ img{
   }
 
   body{
-    font-size:17px;
+    font-size:20px;
     line-height:1.75;
     font-weight:800;
   }
 
   h1,h2,h3,p,span,div{
     font-size:inherit;
-    font-weight:800;
+    font-weight:1000;
   }
 
   .hotel-name{
@@ -448,11 +448,11 @@ img{
   .info-item p,
   .reserv-text,
   .qr-label {
-    font-size:16px;
-    font-weight:800;
+    font-size:20px;
+    font-weight:1000;
   }
 
-  .logo{width:200px;height:auto}
+  .logo{width:300px;height:auto}
   .qr-row{
     grid-template-columns:repeat(2,140px);
     gap:16px;
@@ -561,5 +561,26 @@ h2::after,h3::after{
 
 @media print{
   .travel-bg{opacity:.12}
+}
+
+.brand-watermark{
+  position:absolute;
+  left:50%;
+  top:40%;
+  transform:translate(-50%, -50%) rotate(-12deg);
+  font-size:clamp(160px, 26vw, 340px);
+  font-weight:900;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#2C5AA0;
+  opacity:.06;                 
+  z-index:0;                   
+  pointer-events:none;
+  user-select:none;
+  text-shadow:0 8px 22px rgba(44,90,160,.12);
+}
+
+@media print{
+  .brand-watermark{ opacity:.08; }
 }
 
