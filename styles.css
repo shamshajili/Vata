@@ -552,18 +552,17 @@ h2::after,h3::after{
     transform-origin: top left;
     transform: scale(0.55);
     width: 210vw;
-    height: 2000px;
+    height: 1800px;
     margin: 0 auto;
   }
 }
-
 
 @media (max-width: 768px) {
   .page {
     transform-origin: top left;
     transform: scale(0.45);
     width: 160vw;
-    height: 1800px;
+    height: 800px;
     margin: 0 auto;
   }
 }
@@ -573,7 +572,7 @@ h2::after,h3::after{
     transform-origin: top left;
     transform: scale(0.35);
     width: 290vw;
-    height: 1600px;
+    height: 1400px;
     margin: 0 auto;
   }
 }
@@ -593,8 +592,7 @@ h2::after,h3::after{
 }
 
 @media (max-width: 768px) {
-  body { font-size: 20px; }                
-
+   body { font-size: 20px; }                
   .hotel-name { font-size: 22px; }
   .qr-label { font-size: 14px; }
   .address { font-size: 15px; }
