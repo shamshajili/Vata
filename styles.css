@@ -209,7 +209,7 @@ img{
 }
 
 .mini-card{
-  border:2px solid var(--line);
+  border:1px solid var(--line);
   background:#ffffff;
   border-radius:12px;
   padding:12px;
@@ -261,7 +261,7 @@ img{
   display:inline-block;
   background:var(--pill);
   color:var(--brand-dark);
-  border:2.5px solid #001870;
+  border:1px solid #001870;
   border-radius:10px;
   padding:6px 10px;
   font-variant-numeric:tabular-nums;
@@ -349,7 +349,7 @@ img{
 }
 
 .info-item{
-  border:2px solid var(--line);
+  border:1px solid var(--line);
   background:#ffffff;
   border-radius:12px;
   padding:18px;
@@ -392,245 +392,6 @@ img{
   margin:0;
 }
 
-@media print{
-  body{
-    background:#ffffff;
-  }
-  .page{
-    width:210mm;
-    height:297mm;
-    margin:0;
-    border:none;
-    box-shadow:none;
-    border-radius:0;
-  }
-  @page{
-    size:A4;
-    margin:0;
-  }
-  *{
-    -webkit-print-color-adjust:exact;
-    print-color-adjust:exact;
-  }
-}
-
-@media (max-width:768px){
-  .page{
-    width:100%;
-    margin:0 auto;
-    border:none;
-    box-shadow:none;
-    overflow-x:hidden;
-  }
-  body{
-    font-size:20px;
-    line-height:1.8;
-    font-weight:700;
-  }
-  h1,h2,h3,p,span,div{
-    font-size:inherit;
-    font-weight:900;
-  }
-  .hotel-name{
-    font-size:22px;
-    font-weight:900;
-  }
-  .fact-label,
-  .mini-label,
-  .mini-main,
-  .mini-sub
-  .amount,
-  .agency-card .v,
-  .info-item p,
-  .reserv-text,
-  .qr-label{
-    font-size:inherit;
-    font-weight:900;
-  }
-  .layout{ gap:32px; }
-  .info-list{ gap:24px 16px; }
-  .right-col{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:22px;
-  }
-  .esim-card{ width:220px; }
-
-  .header{
-    grid-template-columns: 1fr 460px; 
-    column-gap:16px;
-    align-items:start;
-  }
-  .logo-block{
-    display:block !important;
-    justify-self:start;
-    text-align:left;
-  }
-  .logo{
-    width:300px !important;  
-    height:auto !important;
-    margin:0 !important;
-  }
-  .logo-img{
-    width:100% !important;
-    height:auto !important;
-    max-height:none !important;
-  }
-
-  .qr-row{
-    display:grid !important;
-    grid-template-columns: repeat(3,110px);
-    gap:55px;
-    justify-content:end;  
-    margin-top:0;  
-    flex-wrap:wrap;  
-    margin-right: 30px;    
-  }
- .qr{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    width:150px;
-    height:180px;
-    padding:10px;
-  }
-    .qr-img{
-    display:block;
-    width:100%;
-    height:120px;
-    object-fit:contain;
-    object-position:center center; 
-  }
-   .qr-label{
-    margin-bottom:6px;
-    font-size:16px;
-    font-weight:800;
-    text-align:center;
-  }
-}
-@media (max-width: 768px) {
-  .brand-watermark{
-    left: 50% !important;
-    top: 44% !important;
-    transform: translate(-50%, -50%) rotate(-12deg) !important;
-
-    font-size: clamp(300px, 80vw, 600px) !important;
-    letter-spacing: .12em !important;
-    opacity: .12 !important;
-
-    z-index: 0 !important;
-    pointer-events: none !important;
-    user-select: none !important;
-  }
-}
-@media (max-width:768px){
-  .agency-card{
-    width:100% !important;
-    max-width:360px !important;
-    padding:18px !important;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    margin-right: 35px !important;
-  }
-
-  .agency-card .row{
-    display:flex !important;
-    justify-content:space-between !important;
-    align-items:center !important;
-    flex-wrap:nowrap !important;
-    gap:8px;
-  }
-
-  .agency-card .k{
-    font-size:18px !important;
-    font-weight:700 !important;
-    width:auto !important;
-    min-width:110px !important;
-    white-space:nowrap;
-  }
-
-  .agency-card .v{
-    font-size:18px !important;
-    font-weight:800 !important;
-    text-align:right;
-    flex:1;
-  }
-
-  .agency-card *{
-    line-height:1.5 !important;
-  }
-}
-
-@media print {
-  body {
-    background: #ffffff !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  .page {
-    width: 210mm !important;
-    height: 297mm !important;
-    margin: 0 auto !important;
-    border: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    overflow: visible !important;
-    position: relative !important;
-  }
-
-  @page {
-    size: A4 portrait;
-    margin: 10mm;
-  }
-
-  .brand-watermark {
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) rotate(-12deg) !important;
-    font-size: clamp(160px, 22vw, 300px) !important;
-    opacity: 0.08 !important;
-    z-index: 0 !important;
-    text-shadow: 0 8px 22px rgba(44, 90, 160, 0.12);
-  }
-
-  .travel-bg,
-  .travel-bg--bottom {
-    display: block !important;
-    opacity: 0.09 !important;
-    color: #2C5AA0 !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  .hotel-card,
-  .checkpay-row,
-  .info-list,
-  .agency-card,
-  .esim-card {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-  }
-
-  .page::before {
-    display: block !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  img, svg {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-
-  .doc-badge {
-    background: #f5f7fb !important;
-    -webkit-print-color-adjust: exact !important;
-  }
-}
 
 .page{
   width:1240px;
@@ -697,12 +458,6 @@ h2::after,h3::after{
   border-radius:2px;
 }
 
-@media print{
-  .doc-badge{background:#f5f7fb !important}
-  .travel-bg{opacity:.06}
-  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-}
-
 .travel-bg{
   position:absolute;
   top:140px;             
@@ -724,11 +479,6 @@ h2::after,h3::after{
   font-size:240px;
   transform:rotate(-15deg);
 }
-
-@media print{
-  .travel-bg{opacity:.12}
-}
-
 .brand-watermark{
   position:absolute;
   left:50%;
@@ -744,9 +494,38 @@ h2::after,h3::after{
   pointer-events:none;
   user-select:none;
   text-shadow:0 8px 22px rgba(44,90,160,.12);
+}@media (max-width: 1024px) {
+  html, body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .page {
+    transform-origin: top left;
+    transform: scale(0.55);
+    width: 220vw;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
-@media print{
-  .brand-watermark{ opacity:.08; }
+@media (max-width: 768px) {
+  .page {
+    transform-origin: top left;
+    transform: scale(0.45);
+    width: 240vw;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
+@media (max-width: 480px) {
+  .page {
+    transform-origin: top left;
+    transform: scale(0.35);
+    width: 300vw;
+    height: auto;
+    margin: 0 auto;
+  }
+}
