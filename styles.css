@@ -505,7 +505,7 @@ h2::after,h3::after{
   .page {
     transform-origin: top left;
     transform: scale(0.55);
-    width: 280vw;
+    width: 320vw;
     height: 2000px;
     margin: 0 auto;
   }
