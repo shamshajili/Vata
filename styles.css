@@ -99,7 +99,7 @@ img{
 .qr-row{
   display:grid;
   grid-template-columns:repeat(3,110px);
-  gap:16px;
+  gap:26px;
   justify-content:end;
   margin-top:24px;
 }
@@ -236,6 +236,8 @@ img{
   min-height:40px;
 }
 
+
+
 .mini-label{
   font-size:10px;
   letter-spacing:.05em;
@@ -255,6 +257,52 @@ img{
 
 .payment-card{
   grid-template-columns:1fr;
+}
+
+.checkpay-row .mini-card.payment-card {
+  border: none !important;    
+  border-color: transparent !important;
+  outline: none !important;         
+  box-shadow: none !important;       
+}
+
+.checkpay-row .mini-card.payment-card::before,
+.checkpay-row .mini-card.payment-card::after {
+  content: none !important;
+}
+.checkpay-row .mini-card{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkpay-row .mini-icon{
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border: 3px solid #0a3771;      
+  border-radius: 50%;
+  display: flex;
+  align-items: center;              
+  justify-content: center;          
+  box-sizing: border-box;
+}
+
+.checkpay-row .mini-icon i{
+  font-size: 18px;                 
+  line-height: 1;
+  display: block;
+  transform: none !important;      
+  position: static !important;
+}
+
+.checkpay-row .payment-card .mini-icon i{
+  font-size: 19px;
+}
+
+.checkpay-row .mini-card.payment-card{
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .amount{
@@ -349,9 +397,7 @@ img{
 }
 
 .info-item{
-  border:1px solid var(--line);
   background:#ffffff;
-  border-radius:12px;
   padding:18px;
   display:grid;
   grid-template-columns:28px 1fr;
