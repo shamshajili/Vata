@@ -286,7 +286,7 @@ img{
   align-items:center;
   justify-content:center;
   text-align:center;
-  margin-left:70px;
+  margin-left:60px;
 }
 
 .esim-label{
@@ -485,7 +485,7 @@ img{
     justify-content:end;  
     margin-top:0;  
     flex-wrap:wrap;  
-    margin-right: 15px;    
+    margin-right: 30px;    
   }
  .qr{
     display:flex;
@@ -533,7 +533,7 @@ img{
     display:flex;
     flex-direction:column;
     gap:10px;
-    margin-right: 20px !important;
+    margin-right: 35px !important;
   }
 
   .agency-card .row{
@@ -563,6 +563,32 @@ img{
     line-height:1.5 !important;
   }
 }
+
+/* PRINT düzəlişi: watermark ölçü və mövqe */
+@media print{
+  .brand-watermark{
+    left: 50% !important;
+    top: 52% !important; /* yuxarı çəkdik ki, alt hissəyə düşməsin */
+    transform: translate(-50%, -50%) rotate(-12deg) !important;
+    font-size: clamp(160px, 22vw, 320px) !important; /* daha kiçik və sabit */
+    opacity: .08 !important;
+  }
+
+  /* Böyük kartların səhifə ortasında bölünməsinin qarşısını al */
+  .hotel-card,
+  .checkpay-row,
+  .info-list,
+  .agency-card,
+  .esim-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Çapda təmizlik üçün təyyarə kölgələrini gizlətmək istəyirsənsə: */
+  .travel-bg,
+  .travel-bg--bottom { display: none !important; }
+}
+
 
 .page{
   width:1240px;
