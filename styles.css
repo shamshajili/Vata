@@ -511,6 +511,7 @@ h2::after,h3::after{
   }
 }
 
+
 @media (max-width: 768px) {
   .page {
     transform-origin: top left;
@@ -573,4 +574,19 @@ h2::after,h3::after{
   .fact-label { font-size: 16px; }
   .esim-label { font-size: 19px; }
   .esim-title { font-size: 17spx; }
+}
+@media (max-width: 1024px) {
+  .logo { transform: scale(1); transform-origin: top left; }
+  .logo img, .logo-img { max-height: none !important; width: auto; height: auto; }
+}
+
+@media (max-width: 768px) {
+  .logo { transform: scale(1.30); transform-origin: top left; }
+  .logo img, .logo-img { max-height: none !important; width: auto; height: auto; }
+}
+
+@media (max-width: 480px) {
+  .logo { transform: scale(1.2); transform-origin: top left; }
+  .logo img, .logo-img { max-height: none !important; width: auto; height: auto; }
+  .esim-title { font-size: 17px; }
 }
