@@ -642,38 +642,38 @@ h2::after,h3::after{
   }
   .logo img, .logo-img { max-height:none !important; width:auto; height:auto; }
   .esim-title { font-size: 17px; }
-}
-@media print {
-  body {
+}@media print {
+  * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
-    background: #ffffff !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  @page {
-    size: A4 portrait;
-    margin: 0;
-  }
-
-  .page {
-    transform: scale(0.65);
-    transform-origin: top left;
-    width: 1240px;
-    height: 1800px;
-    margin: 0 auto !important;
-    border: none !important;
-    box-shadow: none !important;
-    page-break-inside: avoid !important;
-    page-break-before: avoid !important;
-    page-break-after: avoid !important;
-    overflow: hidden !important;
   }
 
   html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    overflow: visible !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto !important;
+    border: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+    overflow: visible !important;
+    page-break-inside: avoid !important;
+  }
+
+  section, header, main, aside, .info-item, .legal {
+    page-break-inside: avoid !important;
   }
 }
